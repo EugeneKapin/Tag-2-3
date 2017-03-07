@@ -1,0 +1,3 @@
+C:\Users\Евгений Капин\Documents\Visual Studio 2015\Projects\Tag\Tag\bin\Debug\Tag.exe.config
+C:\Users\Евгений Капин\Documents\Visual Studio 2015\Projects\Tag\Tag\obj\Debug\Tag.exe
+C:\Users\Евгений Капин\Documents\Visual Studio 2015\Projects\Tag\Tag\obj\Debug\Tag.pdb

@@ -1,0 +1,12 @@
+c:\users\евгений капин\documents\visual studio 2015\Projects\Tag\Tag\bin\Debug\Tag.exe.config
+C:\Users\Евгений Капин\documents\visual studio 2015\Projects\Tag\Tag\bin\Debug\Tag.exe
+C:\Users\Евгений Капин\documents\visual studio 2015\Projects\Tag\Tag\bin\Debug\Tag.pdb
+C:\Users\Евгений Капин\documents\visual studio 2015\Projects\Tag\Tag\obj\Debug\Tag.csprojResolveAssemblyReference.cache
+C:\Users\Евгений Капин\documents\visual studio 2015\Projects\Tag\Tag\obj\Debug\Tag.exe
+C:\Users\Евгений Капин\documents\visual studio 2015\Projects\Tag\Tag\obj\Debug\Tag.pdb
+C:\Users\student\Desktop\Tag\Tag\bin\Debug\Tag.exe.config
+C:\Users\student\Desktop\Tag\Tag\obj\Debug\Tag.exe
+C:\Users\student\Desktop\Tag\Tag\obj\Debug\Tag.pdb
+C:\Users\student\Desktop\Tag\Tag\bin\Debug\Tag.exe
+C:\Users\student\Desktop\Tag\Tag\bin\Debug\Tag.pdb
+C:\Users\student\Desktop\Tag\Tag\obj\Debug\Tag.csprojResolveAssemblyReference.cache
