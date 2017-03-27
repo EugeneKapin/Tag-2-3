@@ -6,37 +6,40 @@ using System.Threading.Tasks;
 
 namespace Tag
 {
-    class Game2 : Game
+    class Game2 : Game, IPlayable
     {
         public Game2(params int[] meaning) : base (meaning)
         {
         }
 
-        public static Game2 StartRandomize(Game margin)
+        public virtual void Randomize(int[] values)
         {
-            int[] meaning = new int[margin.side * margin.side];
             int count = 0;
-            for (int i = 0; i < meaning.Length; i++)
+            Random mass = new Random();
+            while (count != values.Length)
             {
-                meaning[i] = -1;
+                int a = mass.Next(0, values.Length);
+                ShiftForRandomize(a);
+                count++;
             }
-            var rand = new Random();
-            while (count != meaning.Length)
-            {
-                int x = rand.Next(0, meaning.Length);
-                if (!meaning.Contains(x))
-                {
-                    meaning[count] = x;
-                    count++;
-                }
-            }
-            return new Game2(meaning);
         }
 
-        public bool Win
+        private void ShiftForRandomize(int value)
         {
-            get
-            {
+
+            var Numberone = this.GetLocation(value).Item1;
+            var Numbertwo = this.GetLocation(value).Item2;
+            var Voidx = this.GetLocation(0).Item1;
+            var Voidy = this.GetLocation(0).Item2;
+            var cellValue = this.Numbers[Voidx, Voidy];
+            this.Numbers[Voidx, Voidy] = this.Numbers[Numberone, Numbertwo];
+            Voidx = Numberone;
+            Voidy = Numbertwo;
+            this.Numbers[Voidx, Voidy] = cellValue;
+        }
+
+        public bool IsFinished()
+        {
                 for (int i = 0; i < side; i++)
                 {
                     for (int j = 0; j < side; j++)
@@ -49,7 +52,11 @@ namespace Tag
                     }
                 }
                 return true;
-            }
+        }
+
+        public override void Shift(int value)
+        {
+            base.Shift(value);
         }
     }
 }

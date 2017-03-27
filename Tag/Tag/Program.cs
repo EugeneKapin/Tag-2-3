@@ -12,20 +12,34 @@ namespace Tag
     {
         static void Main(string[] args)
         {
-            Game3 margin = new Game3(1, 6, 4, 0, 2, 3, 5, 7, 8, 11, 10, 9, 14, 12, 13, 15);
-            Game2 margin1 = Game2.StartRandomize(margin);
-            Field.Playingfield(margin.Numbers);
-            margin.Shift(4);
-            Field.Playingfield(margin.Numbers);
-            margin.Shift(5);
-            Field.Playingfield(margin.Numbers);
-            margin.Shift(10);
-            Field.Playingfield(margin.Numbers);
-            Console.WriteLine("После");
-            Field.Playingfield(margin1.Numbers);
-            Console.WriteLine(margin.GetStep(1));
-            Console.WriteLine(margin.GetStep(2));
-            Console.WriteLine(margin.GetStep(3));
+            Game margin = new Game(1, 2, 3, 4, 5, 6, 7, 0, 8);
+            Game2 margin1 = new Game2(2, 1, 3, 4, 5, 6, 7, 0, 8);
+            Game3 margin2 = new Game3(1, 2, 3, 4, 5, 6, 7, 0, 8);
+
+            ConsoleGameUI obj = new ConsoleGameUI(margin1);
+            Console.WriteLine("The position of the number 0: {0}", margin1.GetLocation(0));
+            Console.WriteLine("The position of the number 1: {0}", margin1.GetLocation(1));
+            Console.WriteLine("The position of the number 2: {0}", margin1.GetLocation(2));
+            Console.WriteLine("The position of the number 3: {0}", margin1.GetLocation(3));
+            Console.WriteLine("The position of the number 4: {0}", margin1.GetLocation(4));
+            Console.WriteLine("The position of the number 5: {0}", margin1.GetLocation(5));
+            Console.WriteLine("The position of the number 6: {0}", margin1.GetLocation(6));
+            Console.WriteLine("The position of the number 7: {0}", margin1.GetLocation(7));
+            Console.WriteLine("The position of the number 8: {0}", margin1.GetLocation(8));
+            obj.StartGame();
+
+            //Field.Playingfield(margin.Numbers);
+            //margin.Shift(4);
+            //Field.Playingfield(margin.Numbers);
+            //margin.Shift(5);
+            //Field.Playingfield(margin.Numbers);
+            //margin.Shift(10);
+            //Field.Playingfield(margin.Numbers);
+            //Console.WriteLine("После");
+            //Field.Playingfield(margin1.Numbers);
+            //Console.WriteLine(margin.GetStep(1));
+            //Console.WriteLine(margin.GetStep(2));
+            //Console.WriteLine(margin.GetStep(3));
             //Console.WriteLine("{0} with coordinate ({1}) replaced to ({2})", value, margin.GetLocation(0), margin.GetLocation(value));
             //Game game = new Game(1, 6, 4, 0, 2, 3, 5, 7, 8, 11, 10, 9, 14, 12, 13, 15);
             //Field.Playingfield(game.Numbers);

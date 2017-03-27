@@ -67,7 +67,8 @@ namespace Tag
         public Tuple<int, int> GetLocation(int value)
         {            
             if ((value < Math.Pow(side, 2))&&(value>=0))
-            {                
+            {
+                var Cortege = Tuple.Create(dictionary[value].Item1, dictionary[value].Item2);
                 return dictionary[value];
             }
             else throw new ArgumentException("This number " + value + " could not find");   
@@ -134,15 +135,15 @@ namespace Tag
                 //    dictionary[0] = dictionary[value];
                 //    dictionary[value] = positionZero;
                 //}
-                else
-                {
-                    throw new ArgumentException("This number can not be interchanged with zero");
-                }
+                //else
+                //{
+                //    throw new ArgumentException("This number can not be interchan ged with zero");
+                //}
             }
-            else
-            {            
-                throw new ArgumentException("This number " + value + " could not find");     
-            }
+            //else
+            //{            
+            //    throw new ArgumentException("This number " + value + " could not find");     
+            //}
             
         }
 
